@@ -23,9 +23,9 @@ while True:
     delta_frame = cv2.absdiff(first_frame, gray)
     thresh_delta = cv2.threshold(delta_frame, 30, 255, cv2.THRESH_BINARY)[1]
     thresh_delta = cv2.dilate(thresh_delta, None, iterations=0)
-    (_, cnts, _) = cv2.findContours(thresh_delta.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    contours, hierarchy = cv2.findContours(thresh_delta.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-    for contour in cnts:
+    for contour in contours:
         if cv2.contourArea(contour) < 1000:
             continue
         status = 1
