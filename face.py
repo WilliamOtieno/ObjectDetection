@@ -40,9 +40,9 @@ while True:
         times.append(datetime.now())
 
     cv2.imshow("Frame", frame)
-    cv2.imshow("Capturing", gray)
-    cv2.imshow("Delta", delta_frame)
-    cv2.imshow("Thresh", thresh_delta)
+    # cv2.imshow("Capturing", gray)
+    # cv2.imshow("Delta", delta_frame)
+    # cv2.imshow("Thresh", thresh_delta)
     key = cv2.waitKey(1)
 
     if key == ord('q'):
