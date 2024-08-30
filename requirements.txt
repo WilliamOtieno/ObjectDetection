@@ -1,5 +1,5 @@
 numpy==1.18.5
-opencv-python==4.2.0.34
+opencv-python==4.8.1.78
 pandas==1.0.4
 python-dateutil==2.8.1
 pytz==2020.1
